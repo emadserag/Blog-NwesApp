@@ -10,21 +10,19 @@ async function fetchUserPosts() {
         displayUserPosts(userPosts); // Pass the fetched data to your display function
     } catch (error) {
         console.error("Error fetching user posts:", error);
-        // You might want to display an error message to the user here, e.g., in a dedicated error div
-        // document.getElementById('error-message').textContent = 'Failed to load posts. Please try again later.';
+
     }
 }
 
 // display News
 function displayUserPosts(posts) { // <-- Corrected: 'posts' is now a parameter
     let container = ``;
-    // Ensure you have an element with the ID 'rowdata' or whatever ID you intend to use.
-    // For example, if you have a div like <div id="posts-container"></div>
+ 
     const rowdataElement = document.getElementById('rowdata'); // Assuming 'rowdata' is the ID of your container div
 
     if (!rowdataElement) {
         console.error("Error: Element with ID 'rowdata' not found.");
-        return; // Exit the function if the element doesn't exist
+        return; // Exit the function 
     }
 
     if (!posts || posts.length === 0) {
@@ -32,7 +30,7 @@ function displayUserPosts(posts) { // <-- Corrected: 'posts' is now a parameter
         return;
     }
 
-    for (let i = 0; i < posts.length; i++) { // <-- Corrected: Use 'posts' parameter
+    for (let i = 0; i < posts.length; i++) { // Corrected: Use 'posts' parameter
         container += `
         <div class="col-md-6 col-lg-4 mb-4"> <div class="card h-100 shadow-sm"> <div class="card-body d-flex flex-column">
                     <p class="text-center mb-3"> 
