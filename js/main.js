@@ -17,7 +17,7 @@ async function fetchUserPosts() {
 
 // display News
 function displayUserPosts(posts) { // <-- Corrected: 'posts' is now a parameter
-    var container = ``;
+    let container = ``;
     // Ensure you have an element with the ID 'rowdata' or whatever ID you intend to use.
     // For example, if you have a div like <div id="posts-container"></div>
     const rowdataElement = document.getElementById('rowdata'); // Assuming 'rowdata' is the ID of your container div
@@ -32,7 +32,7 @@ function displayUserPosts(posts) { // <-- Corrected: 'posts' is now a parameter
         return;
     }
 
-    for (var i = 0; i < posts.length; i++) { // <-- Corrected: Use 'posts' parameter
+    for (let i = 0; i < posts.length; i++) { // <-- Corrected: Use 'posts' parameter
         container += `
         <div class="col-md-6 col-lg-4 mb-4"> <div class="card h-100 shadow-sm"> <div class="card-body d-flex flex-column">
                     <p class="text-center mb-3"> 
